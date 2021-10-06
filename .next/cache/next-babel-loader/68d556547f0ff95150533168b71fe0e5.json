@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const LIST = 'articles/LIST';\nexport const SINGLE = 'articles/SINGLE';","map":null,"metadata":{},"sourceType":"module"}

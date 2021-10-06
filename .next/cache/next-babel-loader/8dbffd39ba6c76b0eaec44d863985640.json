@@ -1,0 +1,1 @@
+{"ast":null,"code":"import styled from '@emotion/styled';\nexport default styled.div`\n    width: 94%;\n    margin: 0 auto;\n    position: relative;\n\n    &.size-small {\n        max-width: 1100px;\n    }\n    &.size-medium {\n        max-width: 1400px;\n    }\n    &.size-large {\n        max-width: 1700px;\n    }\n`;","map":null,"metadata":{},"sourceType":"module"}

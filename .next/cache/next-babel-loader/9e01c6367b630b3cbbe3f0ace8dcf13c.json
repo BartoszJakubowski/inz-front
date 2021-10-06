@@ -1,0 +1,1 @@
+{"ast":null,"code":"import Page from 'components/modules/public/pages/Home';\nexport default Page;","map":null,"metadata":{},"sourceType":"module"}

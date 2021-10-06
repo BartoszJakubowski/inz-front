@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { jsx as _jsx } from \"react/jsx-runtime\";\n\nconst LayoutPageContainer = ({\n  children\n}) => /*#__PURE__*/_jsx(\"div\", {\n  className: \"layout-page-container\",\n  children: children\n});\n\nLayoutPageContainer.defaultProps = {\n  children: null\n};\nexport default LayoutPageContainer;","map":null,"metadata":{},"sourceType":"module"}

@@ -1,0 +1,1 @@
+{"ast":null,"code":"import Component from './component';\nexport let States;\n\n(function (States) {\n  States[\"Online\"] = \"online\";\n  States[\"Offline\"] = \"offline\";\n})(States || (States = {}));\n\nComponent.defaultProps = {};\nexport default Component;","map":null,"metadata":{},"sourceType":"module"}

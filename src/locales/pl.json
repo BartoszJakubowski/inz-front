@@ -1,0 +1,88 @@
+{
+    "routes": {
+        "home": "/",
+        "news": "/newsy",
+        "login": "/login",
+        "register": "/rejestracja",
+        "transfers": "/transfery"
+    },
+    "navigation": {
+        "main": {
+            "elements": [
+                {
+                    "key": "news",
+                    "buttonProps": {
+                        "href": "{{routes.news}}",
+                        "children": "Newsy"
+                    }
+                },
+                {
+                    "key": "transfers",
+                    "buttonProps": {
+                        "href": "{{routes.transfers}}",
+                        "children": "Transfery"
+                    }
+                }
+            ]
+        },
+        "side": {
+            "elements": [
+                {
+                    "key": "login",
+                    "buttonProps": {
+                        "href": "{{routes.login}}",
+                        "children": "Zaloguj się",
+                        "layout": "default"
+                    } 
+                },
+                {
+                    "key": "register",
+                    "buttonProps": {
+                        "href": "{{routes.register}}",
+                        "children": "Rejestracja",
+                        "layout": "default"
+                    } 
+                }
+            ]
+        }
+    },
+    "home": {
+        "meta": {
+            "title": "Strona główna",
+            "description": "",
+            "keywords": "",
+            "canonical": "/"
+        },
+        "content": {
+            "hero": {
+                "headline": "Wiadomości ze świata piłki nożnej"
+            }
+        }
+    },
+    "login": {
+        "meta": {
+            "title": "Zaloguj się",
+            "description": "",
+            "keywords": "",
+            "canonical": "/login"
+        },
+        "content": {
+            "login": {
+                "headline": "Zaloguj się"
+            }
+        }
+    },
+    "register": {
+        "meta": {
+            "title": "Rejestracja",
+            "description": "",
+            "keywords": "",
+            "canonical": "/rejestracja"
+        },
+        "content": {
+            "register": {
+                "headline": "Rejestracja"
+            }
+        }
+    }
+}

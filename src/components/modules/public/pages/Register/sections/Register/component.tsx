@@ -1,0 +1,110 @@
+import { FunctionComponent, useEffect, useState } from 'react';
+import classnames from 'classnames';
+import { toast } from 'react-toastify';
+
+import { Props } from './index';
+
+import Form from 'components/layout/forms/Form';
+import InputRow from 'components/layout/forms/InputRow';
+import Input from 'components/layout/forms/Input';
+import StyledComponent from './styles';
+import LayoutContainer, { Sizes } from 'components/layout/LayoutContainer';
+import Button, { ButtonTypes, ButtonStyles, ButtonLayouts } from 'components/layout/Button';
+
+const PublicPageRegisterSectionRegister: FunctionComponent<Props> = ({ headline, buttons, actions }) => {
+    const [isSuccess, setIsSuccess]: [boolean, Function] = useState(false);
+
+    console.log(headline);
+
+    return (
+        <>
+            <StyledComponent
+                className={classnames(
+                    'public-page-register-section-register',
+                )}
+            >
+                <LayoutContainer size={Sizes.Large}>
+                    <h3 className="headline">{headline}</h3>
+                    <div className="register-form-wrapper">
+                        {isSuccess && (
+                            <div className="success-info">
+                                <p 
+                                    className="succcess-info-text"
+                                    dangerouslySetInnerHTML={{ __html: "Gitara siema"}}
+                                />
+                            </div>
+                        )}
+                        {!isSuccess && (
+                            <Form
+                                // submitAction={actions.register}
+                                onSuccess={() => setIsSuccess(true)}
+                                onError={() => {
+                                    toast.error("Wystąpił błąd, spróbuj ponownie później")
+                                }}
+                            >
+                                {({ formik }) => {
+                                    return (
+                                        <>
+                                            <InputRow>
+                                                <Input
+                                                    name="name"
+                                                    placeholder={"Imię"}
+                                                    onChange={formik.handleChange}
+                                                    value={formik.values.name}
+                                                />
+                                            </InputRow>
+                                            <InputRow>
+                                                <Input
+                                                    name="surname"
+                                                    placeholder={"Nazwisko"}
+                                                    onChange={formik.handleChange}
+                                                    value={formik.values.surname}
+                                                />
+                                            </InputRow>
+                                            <InputRow>
+                                                <Input
+                                                    name="email"
+                                                    type="email"
+                                                    placeholder={"Email"}
+                                                    onChange={formik.handleChange}
+                                                    value={formik.values.email}
+                                                />
+                                            </InputRow>
+                                            <InputRow>
+                                                <Input
+                                                    name="userName"
+                                                    type="userName"
+                                                    placeholder={"Nazwa użytkownika"}
+                                                    onChange={formik.handleChange}
+                                                    value={formik.values.userName}
+                                                />
+                                            </InputRow>
+                                            <InputRow>
+                                                <Input
+                                                    name="password"
+                                                    type="password"
+                                                    placeholder={"Hasło"}
+                                                    onChange={formik.handleChange}
+                                                    value={formik.values.password}
+                                                />
+                                            </InputRow>
+                                            <Button 
+                                                type={ButtonTypes.Submit}
+                                                children={"Zaloguj"}
+                                                style={ButtonStyles.Primary}
+                                                layout={ButtonLayouts.Wide}
+                                            />
+                                        </>
+                                    )
+                                }}
+                            </Form>
+                        )}
+                        <div className="no-account">Masz już konto? Kliknij <a href="/login">tutaj</a> i przejdź do logowania!</div>
+                    </div>
+                </LayoutContainer>
+            </StyledComponent>
+        </>
+    )
+};
+
+export default PublicPageRegisterSectionRegister;

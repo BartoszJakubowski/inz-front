@@ -1,0 +1,1 @@
+{"ast":null,"code":"import Component from './component';\nComponent.defaultProps = {\n  children: null\n};\nexport default Component;","map":null,"metadata":{},"sourceType":"module"}

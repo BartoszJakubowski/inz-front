@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const SINGLE = 'products/SINGLE';","map":{"version":3,"sources":["/home/bartosz/Pulpit/inz/my-app/src/store/modules/products/types.ts"],"names":["SINGLE"],"mappings":"AAAA,OAAO,MAAMA,MAAM,GAAG,iBAAf","sourcesContent":["export const SINGLE = 'products/SINGLE';\n"]},"metadata":{},"sourceType":"module"}

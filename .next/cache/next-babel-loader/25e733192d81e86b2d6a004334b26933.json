@@ -1,0 +1,1 @@
+{"ast":null,"code":"import Component from './component';\nexport var Variants;\n\n(function (Variants) {\n  Variants[\"Dark\"] = \"dark\";\n  Variants[\"Light\"] = \"light\";\n})(Variants || (Variants = {}));\n\nComponent.defaultProps = {\n  variant: Variants.Dark\n};\nexport default Component;","map":null,"metadata":{},"sourceType":"module"}

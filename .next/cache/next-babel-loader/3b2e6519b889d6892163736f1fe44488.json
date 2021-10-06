@@ -1,0 +1,1 @@
+{"ast":null,"code":"export var SINGLE_BY_SLUG = 'offers/SINGLE_BY_SLUG';","map":{"version":3,"sources":["/home/bartosz/Pulpit/inz/my-app/src/store/modules/offers/types.ts"],"names":["SINGLE_BY_SLUG"],"mappings":"AAAA,OAAO,IAAMA,cAAc,GAAG,uBAAvB","sourcesContent":["export const SINGLE_BY_SLUG = 'offers/SINGLE_BY_SLUG';\n"]},"metadata":{},"sourceType":"module"}
